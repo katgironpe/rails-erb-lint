@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'gli'
+require 'rails-erb-lint'
+include GLI::App
+
+exit run(ARGV)
