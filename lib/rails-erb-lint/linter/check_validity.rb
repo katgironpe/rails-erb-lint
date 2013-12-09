@@ -28,7 +28,6 @@ command :check do |c|
         p "Please edit #{f} and fix errors."
       end
     end
-    abort
   end
 end
 
