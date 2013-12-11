@@ -15,7 +15,6 @@ gem install rails-erb-lint
 ## Usage
 
 ```bash
-cd your-rails-app
-rails-erb-lint check app/views/**/*/*.html.erb
-```
-
+cd you-rails-app/app/views
+rails-erb-lint check
+`
