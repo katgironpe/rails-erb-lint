@@ -17,4 +17,4 @@ gem install rails-erb-lint
 ```bash
 cd you-rails-app/app/views
 rails-erb-lint check
-`
+```
