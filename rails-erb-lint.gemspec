@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version = RailsErbLint::VERSION
   s.author = 'Katherine Pe'
   s.email = 'k@kat.pe'
-  s.homepage = 'http://c.kat.pe'
+  s.homepage = 'https://github.com/katgironpe/rails-erb-lint'
   s.platform = Gem::Platform::RUBY
   s.summary = 'Checks validity of ERB files for your Rails app.'
   s.description = 'Lint tool for Rails ERB views'
