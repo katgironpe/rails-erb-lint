@@ -10,4 +10,4 @@ Feature: Check validity of Rails ERB view files
   Scenario: Wheck check_validity option is called on invalid views without arguments
     When I check validity of ERB files in current directory
     Then the output should contain "Checking for files in current directory"
-    And the output should contain "0 invalid"
+    And the output should contain "0 invalid files"
