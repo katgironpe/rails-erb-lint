@@ -18,3 +18,8 @@ gem install rails-erb-lint
 cd you-rails-app/app/views
 rails-erb-lint check
 ```
+
+## TO DO
+
+see https://github.com/katgironpe/rails-erb-lint/issues
+
