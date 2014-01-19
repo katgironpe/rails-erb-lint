@@ -15,9 +15,8 @@ Gem::Specification.new do |s|
   s.bindir = 'bin'
   s.executables << 'rails-erb-lint'
   s.add_development_dependency('rake')
-  s.add_development_dependency('rdoc')
   s.add_development_dependency('aruba')
-  s.add_dependency('actionpack', '4.0.1')
+  s.add_dependency('actionpack', '>= 4.0.1')
   s.add_development_dependency('builder')
-  s.add_runtime_dependency('gli','2.8.1')
+  s.add_runtime_dependency('gli','>= 2.8.1')
 end
