@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 require 'gli'
 require 'action_view'
 require 'find'
