@@ -1,6 +1,8 @@
 require 'gli'
 require 'action_view'
 require 'find'
+require 'colorize'
+
 require_relative '../helpers/rails_erb_check'
 
 include GLI::App
@@ -15,7 +17,7 @@ command :check do |c|
     erb_files = []
 
     path = Dir.getwd
-    p "Checking for files in current directory: #{path}"
+    puts "Checking for files in current directory: #{path}".green
 
     Find.find(path.to_s) do |f|
       next if FileTest.directory?(f)
@@ -26,10 +28,10 @@ command :check do |c|
 
     erb_files.each do |f|
       if RailsErbCheck.valid_syntax?(File.read(f))
-        p "#{f} => valid"
+        puts "#{f} => valid".green
         valid << f
       else
-        p "#{f} => invalid"
+        puts "#{f} => invalid".red
         invalid << f
       end
     end
@@ -37,7 +39,7 @@ command :check do |c|
     p "#{valid.size + invalid.size} files, #{invalid.size} invalid files"
     if invalid.size > 0
       invalid.each do |f|
-        p "Please edit #{f} and fix errors."
+        puts "Please edit #{f} and fix errors.".red
       end
     end
 
