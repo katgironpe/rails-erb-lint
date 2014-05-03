@@ -21,5 +21,4 @@ rails-erb-lint check
 
 ## TO DO
 
-see https://github.com/katgironpe/rails-erb-lint/issues
-
+see <a href="https://github.com/katgironpe/rails-erb-lint/issues" target="_blank">https://github.com/katgironpe/rails-erb-lint/issues</a>

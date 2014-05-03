@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name = 'rails-erb-lint'
   s.version = RailsErbLint::VERSION
   s.author = 'Katherine Pe'
-  s.email = 'k@kat.pe'
+  s.email = 'katherinepe@me.com'
   s.homepage = 'https://github.com/katgironpe/rails-erb-lint'
   s.platform = Gem::Platform::RUBY
   s.summary = 'Checks validity of ERB files for your Rails app.'
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency('rake')
   s.add_development_dependency('aruba')
   s.add_dependency('colorize')
-  s.add_dependency('actionpack', '>= 4.0.2')
+  s.add_dependency('actionpack', '4.1.0')
   s.add_development_dependency('builder')
-  s.add_runtime_dependency('gli','>= 2.8.1')
+  s.add_runtime_dependency('gli','2.10.0')
 end

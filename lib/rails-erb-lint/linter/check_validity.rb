@@ -28,7 +28,6 @@ command :check do |c|
 
     erb_files.each do |f|
       if RailsErbCheck.valid_syntax?(File.read(f))
-        puts "#{f} => valid".green
         valid << f
       else
         puts "#{f} => invalid".red
@@ -37,12 +36,6 @@ command :check do |c|
     end
 
     p "#{valid.size + invalid.size} files, #{invalid.size} invalid files"
-    if invalid.size > 0
-      invalid.each do |f|
-        puts "Please edit #{f} and fix errors.".red
-      end
-    end
-
   end
 end
 
