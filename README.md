@@ -2,6 +2,10 @@
 
 Checks for the validity of your ERB views.
 
+## "But if you write tests, you won't have these problems"
+
+So test. TDD is not dead.
+
 ## Requirements
 
 * Ruby 1.9.3 or greater
@@ -15,7 +19,7 @@ gem install rails-erb-lint
 ## Usage
 
 ```bash
-cd you-rails-app/app/views
+cd your-rails-app/app/views
 rails-erb-lint check
 ```
 
