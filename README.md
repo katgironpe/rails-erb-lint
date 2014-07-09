@@ -1,5 +1,7 @@
 # Rails ERB Lint
 
+[![Code Climate](https://codeclimate.com/github/katgironpe/rails-erb-lint.png)](https://codeclimate.com/github/katgironpe/rails-erb-lint)
+
 Checks for the validity of your ERB views.
 
 ## "But if you write tests, you won't have these problems"
