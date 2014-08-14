@@ -11,7 +11,8 @@ program_desc 'A simple lint tool for ERB Rails views.'
 
 desc 'Check for syntax errors on views'
 command :check do |c|
-  c.action do |global_options,options|
+  c.switch :verbose, default_value: false
+  c.action do |global_options, options|
     valid = []
     invalid = []
     erb_files = []
@@ -28,6 +29,7 @@ command :check do |c|
 
     erb_files.each do |f|
       if RailsErbCheck.valid_syntax?(File.read(f))
+        puts "#{f} => valid".green if options[:verbose]
         valid << f
       else
         puts "#{f} => invalid".red
@@ -35,7 +37,7 @@ command :check do |c|
       end
     end
 
-    p "#{valid.size + invalid.size} files, #{invalid.size} invalid files"
+    puts "#{valid.size + invalid.size} files, #{invalid.size} invalid files".yellow
   end
 end
 
