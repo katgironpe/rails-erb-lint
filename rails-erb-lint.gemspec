@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/katgironpe/rails-erb-lint'
   s.platform = Gem::Platform::RUBY
   s.summary = 'Checks validity of ERB files for your Rails app.'
-  s.description = 'Lint tool for Rails ERB views'
+  s.description = 'Checks validity of ERB files for your Rails app.'
   s.license     = 'MIT'
   s.files = Dir['lib/**/*.rb']
   s.require_paths << 'lib'

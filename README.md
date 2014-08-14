@@ -35,6 +35,12 @@ cd your-rails-app/app/views
 rails-erb-lint check -v
 ```
 
-## TO DO
+## Using Slim and HAML
 
-see <a href="https://github.com/katgironpe/rails-erb-lint/issues" target="_blank">https://github.com/katgironpe/rails-erb-lint/issues</a>
+Initially planned to discontinue the idea of a lint tool for ERB views.
+I think there should be a gem that works for Slim/HAML/ERB for that.
+
+ERB by experience is not fun or sensible to use.
+HAML or Slim works well.
+
+<a href="https://github.com/slim-template/html2slim" target="_blank">Convert ERB to Slim</a>
