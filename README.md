@@ -3,6 +3,8 @@
 [![Gem Version](https://badge.fury.io/rb/rails-erb-lint.svg)](http://badge.fury.io/rb/rails-erb-lint)
 [![CI Build Status](https://secure.travis-ci.org/katgironpe/rails-erb-lint.svg?branch=master)](http://travis-ci.org/katgironpe/rails-erb-lint)
 [![Code Climate](https://codeclimate.com/github/katgironpe/rails-erb-lint.png)](https://codeclimate.com/github/katgironpe/rails-erb-lint)
+[![Dependency Status](https://gemnasium.com/katgironpe/rails-erb-lint.svg)](https://gemnasium.com/katgironpe/rails-erb-lint)
+
 
 Checks for the validity of your ERB views.
 
