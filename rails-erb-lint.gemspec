@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency('rake')
   s.add_development_dependency('aruba')
   s.add_dependency('colorize')
-  s.add_dependency('actionpack', '4.1.4')
+  s.add_dependency('actionpack', '~> 4.0')
   s.add_development_dependency('builder')
   s.add_runtime_dependency('gli','2.12.0')
 end
