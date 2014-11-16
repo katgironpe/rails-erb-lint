@@ -19,5 +19,5 @@ Gem::Specification.new do |s|
   s.add_dependency('colorize')
   s.add_dependency('actionpack', '~> 4.0')
   s.add_development_dependency('builder')
-  s.add_runtime_dependency('gli','2.12.0')
+  s.add_runtime_dependency('gli','~> 2.0')
 end
