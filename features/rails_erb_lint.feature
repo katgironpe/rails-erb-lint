@@ -7,6 +7,12 @@ Feature: Check validity of Rails ERB view files
     Then the exit status should be 0
     And the output should contain "A simple lint tool for ERB Rails views"
 
+  Scenario: Wheck check_validity option is called on valid views without arguments
+    Given I have only valid ERB files
+    When I check validity of ERB files in current directory
+    Then the output should contain "Checking for files in current directory"
+    And the output should contain "0 invalid files"
+
   Scenario: Wheck check_validity option is called on invalid views without arguments
     Given I have invalid ERB files
     When I check validity of ERB files in current directory

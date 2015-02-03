@@ -1,3 +1,9 @@
+Given(/^I have only valid ERB files$/) do
+  source = Dir['./features/fixtures/app/views/valid.erb']
+  dest = Dir['./tmp/aruba/']
+  FileUtils.cp_r(source, dest)
+end
+
 Given(/^I have invalid ERB files$/) do
   source = Dir['./features/fixtures/app/views/*']
   dest = Dir['./tmp/aruba']
