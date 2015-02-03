@@ -13,7 +13,7 @@ Feature: Check validity of Rails ERB view files
     And the output should contain "2 files, 1 invalid file"
     And the output should not contain "valid.erb => valid"
 
-  Scenario: Wheck check_validity option is called on invalid views without arguments
+  Scenario: Wheck check_validity option is called on invalid views with the -v switch
     When I check validity of ERB files in current directory with -v switch
     Then the output should contain "Checking for files in current directory"
     And the output should contain "2 files, 1 invalid file"
