@@ -37,7 +37,9 @@ command :check do |c|
       end
     end
 
-    puts "#{valid.size + invalid.size} files, #{invalid.size} invalid files".yellow
+    exit_now!("#{invalid.size} invalid files") if invalid.any?
+
+    puts "#{valid.size + invalid.size} files, no invalid files".yellow
   end
 end
 
