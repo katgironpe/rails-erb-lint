@@ -73,8 +73,15 @@ command :check do |c|
     desc: 'Export a json file with results, also exports valid files when coupled with -v'
   }
 
+  c.flag [:p, :path], {
+    default_value: Dir.getwd,
+    arg_name: 'path',
+    type: String,
+    desc: 'specify the path that should be used as the root of the check'
+  }
+
   c.action do |global_options, options|
-    path = Dir.getwd
+    path = options[:path]
     puts Rainbow("Checking for files in current directory: #{path}").green
 
     erbs  = get_erb_list(path)
