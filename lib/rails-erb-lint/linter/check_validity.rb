@@ -1,8 +1,10 @@
-require 'gli'
-require 'action_view'
-require 'find'
-require 'rainbow'
-require 'json'
+['action_view',
+ 'find',
+ 'gli',
+ 'json',
+ 'rainbow'].each do |d|
+  require d
+end
 
 require_relative '../helpers/rails_erb_check'
 
