@@ -43,6 +43,12 @@ This will print the errors:
 rails-erb-lint check -e
 ```
 
+To export report as json file:
+
+```bash
+rails-erb-lint check -v -e errors.json
+```
+
 ## Using Slim and HAML
 
 Initially planned to discontinue the idea of a lint tool for ERB views.
@@ -50,5 +56,6 @@ I think there should be a gem that works for Slim/HAML/ERB for that.
 
 ERB by experience is not fun or sensible to use.
 HAML or Slim works well.
+
 
 <a href="https://github.com/slim-template/html2slim" target="_blank">Convert ERB to Slim</a>
