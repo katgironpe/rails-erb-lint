@@ -29,3 +29,11 @@ Feature: Check validity of Rails ERB view files
     And the output should contain "1 invalid file"
     And the output should contain "valid.erb => valid"
     And the exit status should be 1
+
+  Scenario: Wheck check_validity option is called on invalid views with the -e switch
+    Given I have invalid ERB files
+    When I check validity of ERB files in current directory with -e switch
+    Then the output should contain "Checking for files in current directory"
+    And the output should contain "1 invalid file"
+    And the output should contain "syntax error, unexpected '<'"
+    And the exit status should be 1

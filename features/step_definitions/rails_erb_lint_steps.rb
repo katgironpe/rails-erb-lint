@@ -23,6 +23,10 @@ Then /^I check validity of ERB files in current directory with -v switch$/ do
   step %(I run `rails-erb-lint check --valid`)
 end
 
+Then /^I check validity of ERB files in current directory with -e switch$/ do
+  step %(I run `rails-erb-lint check -e`)
+end
+
 Then /^the output should contain ([^"]*)"$/ do |output|
   assert_matching_output(output)
 end
