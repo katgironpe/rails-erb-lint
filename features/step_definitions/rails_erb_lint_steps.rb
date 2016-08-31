@@ -20,7 +20,7 @@ Then /^I check validity of ERB files in current directory$/ do
 end
 
 Then /^I check validity of ERB files in current directory with -v switch$/ do
-  step %(I run `rails-erb-lint check --verbose`)
+  step %(I run `rails-erb-lint check --valid`)
 end
 
 Then /^the output should contain ([^"]*)"$/ do |output|

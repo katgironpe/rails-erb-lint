@@ -30,7 +30,7 @@ rails-erb-lint check
 ```
 
 By default, we don't show which files are valid as that makes little sense. 
-However you can show them through verbose mode.
+However you can show them through valid mode.
 
 ```bash
 cd your-rails-app/app/views

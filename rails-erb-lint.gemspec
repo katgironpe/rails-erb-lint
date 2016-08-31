@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency('aruba')
   s.add_dependency('rainbow', '~> 2.0')
   s.add_dependency('actionpack', '>= 4.0')
+  s.add_dependency('json')
   s.add_development_dependency('builder')
   s.add_dependency('gli','~> 2.1')
 end
