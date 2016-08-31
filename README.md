@@ -29,12 +29,18 @@ cd your-rails-app/app/views
 rails-erb-lint check
 ```
 
-By default, we don't show which files are valid as that makes little sense. 
+By default, we don't show which files are valid as that makes little sense.
 However you can show them through valid mode.
 
 ```bash
 cd your-rails-app/app/views
 rails-erb-lint check -v
+```
+
+This will print the errors:
+
+```bash
+rails-erb-lint check -e
 ```
 
 ## Using Slim and HAML
