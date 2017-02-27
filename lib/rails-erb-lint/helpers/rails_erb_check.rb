@@ -2,6 +2,13 @@ require 'action_view'
 
 module RailsErbCheck
   class Checker
+    CHECKER =
+      if defined?(ActionView::Template::Handlers::ERB::Erubi)
+        ActionView::Template::Handlers::ERB::Erubi
+      else
+        ActionView::Template::Handlers::Erubis
+      end
+
     attr_reader :error
 
     def initialize(erb_path)
@@ -10,7 +17,7 @@ module RailsErbCheck
 
     def valid_syntax?
       begin
-        ActionView::Template::Handlers::Erubis.new(@erb).result
+        CHECKER.new(@erb).result
       rescue SyntaxError => e
         @error = e
         return false
