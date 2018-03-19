@@ -4,9 +4,9 @@ module RailsErbCheck
   class Checker
     CHECKER =
       if defined?(ActionView::Template::Handlers::ERB::Erubi)
-        ActionView::Template::Handlers::ERB::Erubi
+        ->(erb) { eval ActionView::Template::Handlers::ERB::Erubi.new(erb).src }
       else
-        ActionView::Template::Handlers::Erubis
+        ->(erb) { ActionView::Template::Handlers::Erubis.new(erb).result }
       end
 
     attr_reader :error
@@ -17,7 +17,7 @@ module RailsErbCheck
 
     def valid_syntax?
       begin
-        CHECKER.new(@erb).result
+        CHECKER.call(@erb)
       rescue SyntaxError => e
         @error = e
         return false
