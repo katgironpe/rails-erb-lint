@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.executables << 'rails-erb-lint'
   s.add_development_dependency('rake')
   s.add_development_dependency('aruba')
-  s.add_dependency('rainbow', '~> 2.0')
+  s.add_dependency('rainbow', '>= 2.2.2', '< 4.0')
   s.add_dependency('actionpack', '>= 4.0')
   s.add_dependency('json')
   s.add_development_dependency('builder')
